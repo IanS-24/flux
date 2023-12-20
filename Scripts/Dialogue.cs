@@ -55,7 +55,7 @@ public class Dialogue : MonoBehaviour
         txt.SetActive(false);
     }
 
-    public IEnumerator PlayDialogue(string[] lines, /*int[] frames,*/ Vector3 position, int font = 48)
+    public IEnumerator PlayDialogue(string[] lines, Vector3 position, int font = 48)
     {
         txt.GetComponent<CanvasGroup>().alpha = 1;
         finished = false;
