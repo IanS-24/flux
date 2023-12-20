@@ -76,16 +76,6 @@ public class Dialogue : MonoBehaviour
             }
 
             skip = false;
-            /*if (frames[i] != lastFrame || i == 0)
-            {
-                if (i != 0) {
-                    Destroy(currentFrame);
-                }
-                currentFrame = Instantiate(framePrefabs[frames[i]], position, transform.rotation);
-                currentFrame.transform.SetParent(GameObject.Find("TextCanvas").transform, false);
-                currentFrame.transform.SetSiblingIndex(0);
-            }
-            lastFrame = frames[i];*/
             IEnumerator talkCor = Talk(lines[i]);
             StartCoroutine(talkCor);
             for (float j = 0; j < dialogueTime(lines[i]); j+=0.1f)
